@@ -5,177 +5,165 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
 }
 
 /* ==================== Header Styles ==================== */
-.header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 30px 0;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.header__title {
+.head {
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    text-align: center;
-    letter-spacing: 0.5px;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
-/* ==================== Navbar Styles ==================== */
-.navbar {
+/* ==================== Navigation Styles ==================== */
+.nav {
     background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
     margin-bottom: 30px;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.navbar__menu {
+.nav ol {
     list-style: none;
     display: flex;
-    gap: 0;
+    flex-wrap: wrap;
 }
 
-.navbar__item {
+.nav ol li {
     flex: 1;
+    min-width: 150px;
 }
 
-.navbar__link {
+.nav ol li a {
     display: block;
-    padding: 15px 20px;
+    padding: 16px 20px;
     text-decoration: none;
     color: #333;
+    font-weight: 600;
     text-align: center;
-    font-weight: 500;
     transition: all 0.3s ease;
-    border-radius: 8px 0 0 8px;
+    border-bottom: 3px solid transparent;
 }
 
-.navbar__item:first-child .navbar__link {
-    border-radius: 8px 0 0 8px;
-}
-
-.navbar__item:last-child .navbar__link {
-    border-radius: 0 8px 8px 0;
-}
-
-.navbar__link:hover {
+.nav ol li a:hover {
     background-color: #667eea;
     color: white;
+    border-bottom-color: #764ba2;
+}
+
+.nav ol li a:active {
+    transform: scale(0.98);
 }
 
 /* ==================== Main Content ==================== */
-.main {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* ==================== Transactions Section ==================== */
-.transactions {
-    width: 100%;
-}
-
-.transactions__title {
+body > h2 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
     color: #333;
-    border-bottom: 2px solid #667eea;
-    padding-bottom: 10px;
+    margin: 30px 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
 }
 
 /* ==================== Table Styles ==================== */
-.table {
+table {
     width: 100%;
+    max-width: 900px;
+    background-color: white;
     border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
-.table__head {
-    background-color: #667eea;
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-}
-
-.table__header {
+    font-weight: 700;
     padding: 15px;
+    display: table-cell;
     text-align: left;
-    font-weight: 600;
-    font-size: 1rem;
 }
 
-.table__row {
-    border-bottom: 1px solid #ddd;
+table tr {
+    border-bottom: 1px solid #eee;
     transition: background-color 0.2s ease;
 }
 
-.table__row:hover {
+table tr:hover {
     background-color: #f9f9f9;
 }
 
-.table__cell {
-    padding: 12px 15px;
+table tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 14px 16px;
     text-align: left;
 }
 
-.table__cell.amount {
-    text-align: right;
+tbody tr td:first-child {
     font-weight: 600;
     color: #667eea;
 }
 
-/* ==================== Login Form Styles ==================== */
-.form-wrapper {
-    max-width: 500px;
-    margin: 50px auto;
+tbody tr td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: #764ba2;
 }
 
-.login-section {
+/* ==================== Form Styles ==================== */
+section {
+    max-width: 500px;
+    margin: 40px auto;
     background-color: white;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.login-section__title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.form {
+form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.form__group {
+form div {
     display: flex;
     flex-direction: column;
 }
 
-.form__label {
+label {
     font-weight: 600;
     margin-bottom: 8px;
     color: #333;
     font-size: 0.95rem;
 }
 
-.form__input {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     padding: 12px 15px;
     border: 2px solid #e0e0e0;
     border-radius: 6px;
@@ -184,18 +172,25 @@ body {
     font-family: inherit;
 }
 
-.form__input:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
     outline: none;
     border-color: #667eea;
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
     background-color: #f9faff;
 }
 
-.form__input::placeholder {
+input::placeholder {
     color: #aaa;
 }
 
-.form__button {
+form div:last-child input {
+    margin-bottom: 15px;
+}
+
+/* ==================== Button Styles (if added) ==================== */
+button {
     padding: 12px 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -205,83 +200,90 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 10px;
 }
 
-.form__button:hover {
+button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
 }
 
-.form__button:active {
+button:active {
     transform: translateY(0);
 }
 
 /* ==================== Responsive Design ==================== */
 @media (max-width: 768px) {
-    .header__title {
+    .head {
         font-size: 2rem;
+        padding: 20px 15px;
     }
 
-    .navbar__menu {
+    .nav ol {
         flex-direction: column;
     }
 
-    .navbar__link {
-        border-radius: 0;
+    .nav ol li {
+        min-width: 100%;
+        border-bottom: 1px solid #eee;
     }
 
-    .navbar__item:first-child .navbar__link {
-        border-radius: 8px 8px 0 0;
+    .nav ol li:last-child {
+        border-bottom: none;
     }
 
-    .navbar__item:last-child .navbar__link {
-        border-radius: 0 0 8px 8px;
-    }
-
-    .table {
-        font-size: 0.9rem;
-    }
-
-    .table__header,
-    .table__cell {
-        padding: 10px;
-    }
-
-    .main {
-        padding: 20px;
-    }
-
-    .transactions__title {
+    body > h2 {
         font-size: 1.5rem;
     }
 
-    .login-section {
+    table {
+        font-size: 0.9rem;
+    }
+
+    td {
+        padding: 10px 12px;
+    }
+
+    section {
         margin: 20px;
         padding: 25px;
     }
 }
 
 @media (max-width: 480px) {
-    .container {
+    body {
         padding: 10px;
     }
 
-    .header__title {
+    .head {
         font-size: 1.5rem;
+        padding: 15px 10px;
     }
 
-    .transactions__title {
+    body > h2 {
         font-size: 1.3rem;
     }
 
-    .table__header,
-    .table__cell {
-        padding: 8px 5px;
-        font-size: 0.85rem;
+    table {
+        font-size: 0.8rem;
     }
 
-    .login-section__title {
-        font-size: 1.5rem;
+    td {
+        padding: 8px;
+    }
+
+    section {
+        padding: 20px 15px;
+        margin: 10px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px 12px;
+        font-size: 0.95rem;
     }
 }
