@@ -24,7 +24,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     color: white;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #29bbbb 100%);
     padding: 30px 20px;
     margin-bottom: 25px;
     border-radius: 12px;
@@ -83,7 +83,7 @@ body > h2 {
     border-bottom: 3px solid #667eea;
 }
 
-/* ==================== Table Styles ==================== */
+/* /* ==================== Table Styles ==================== */
 table {
     width: 100%;
     max-width: 900px;
@@ -100,8 +100,8 @@ thead {
     color: white;
     font-weight: 700;
     padding: 15px;
-    display: table-cell;
-    text-align: left;
+    text-align: center;
+
 }
 
 table tr {
@@ -128,12 +128,12 @@ tbody tr td:first-child {
 }
 
 tbody tr td:last-child {
-    text-align: right;
+    text-align: center;
     font-weight: 600;
     color: #764ba2;
 }
 
-/* ==================== Form Styles ==================== */
+/* /* ==================== Form Styles ====================  */
 section {
     max-width: 500px;
     margin: 40px auto;
@@ -189,7 +189,7 @@ form div:last-child input {
     margin-bottom: 15px;
 }
 
-/* ==================== Button Styles (if added) ==================== */
+/* /* ==================== Button Styles (if added) ====================  */
 button {
     padding: 12px 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -209,9 +209,9 @@ button:hover {
 
 button:active {
     transform: translateY(0);
-}
+} 
 
-/* ==================== Responsive Design ==================== */
+/* /* ==================== Responsive Design ==================== */
 @media (max-width: 768px) {
     .head {
         font-size: 2rem;
@@ -286,4 +286,4 @@ button:active {
         padding: 10px 12px;
         font-size: 0.95rem;
     }
-}
+}  */
