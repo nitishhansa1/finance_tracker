@@ -11,19 +11,45 @@ body{
     color: #333;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    align-content: center;
+}
+
+/* .container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    border-collapse: collapse;
+} */
+ 
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;   /* IMPORTANT */
 }
 
 .login {
     font-family: sans-serif;
+    border: 2px solid;
     border-radius: 12px;
     padding: 35px 30px;
     width: 100%;
     max-width: 420px;
-    margin: 40px auto;
+    margin: 40px ;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 
+}
+
+.login:hover{
+    
 }
 
 .form {
@@ -64,7 +90,7 @@ body{
     border-color: linear-gradient(140deg, #9ad49a 0%, #75b1cb 100%);  
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 0.95rem;
     outline: none;
@@ -72,7 +98,7 @@ body{
 }
 
 .inpemail:hover, .inpname:hover, .inppass:hover, .inpcpass:hover{
-    border-color: aquamarine;
+    border-color: rgb(69, 189, 208);
 }
 
 .inpemail:focus, .inpname:focus, .inppass:focus, .inpcpass:focus {
@@ -97,3 +123,40 @@ body{
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
     transform: translateY(-2px);
 }
+
+.info {
+    background-color: #6d80d7;
+    width: 600px;
+    padding: 10px;
+    margin: 40px ;
+    border: 2px solid #3957df;
+    border-radius: 8px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.login,
+.info{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.login:hover,
+.info:hover{
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.container:hover .login:not(:hover),
+.container:hover .info:not(:hover){
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+
+

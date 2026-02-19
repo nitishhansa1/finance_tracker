@@ -84,7 +84,8 @@ body > h2 {
 }
 
 /* /* ==================== Table Styles ==================== */
-table {
+
+table{
     width: 100%;
     max-width: 900px;
     background-color: white;
@@ -286,4 +287,4 @@ button:active {
         padding: 10px 12px;
         font-size: 0.95rem;
     }
-}  */
+}  
